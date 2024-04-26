@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 import {Card, ListGroup, ListGroupItem } from 'react-bootstrap';
 import { BsStarFill } from 'react-icons/bs'
 import { Image } from 'react-bootstrap';
+import ReviewForm from './review.js';
 
 class MovieDetail extends Component {
 
@@ -44,6 +45,9 @@ class MovieDetail extends Component {
                             </p>
                         )}
                     </Card.Body>
+                    <Card.Footer>
+                        <ReviewForm movieId={this.props.selectedMovie._id}/>
+                    </Card.Footer>
                 </Card>
             )
         }
